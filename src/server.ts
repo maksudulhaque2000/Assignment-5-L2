@@ -8,10 +8,13 @@ async function main() {
     // eslint-disable-next-line no-console
     console.log('✅ Database connected successfully');
 
-    app.listen(config.port, () => {
-      // eslint-disable-next-line no-console
-      console.log(`✅ RideX server is running on port ${config.port}`);
-    });
+    if (process.env.NODE_ENV !== 'production') {
+      app.listen(config.port, () => {
+        // eslint-disable-next-line no-console
+        console.log(`✅ RideX server is running on port ${config.port}`);
+      });
+    }
+
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error('❌ Failed to connect to database', err);
@@ -19,3 +22,5 @@ async function main() {
 }
 
 main();
+
+export default app;
