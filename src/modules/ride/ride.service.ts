@@ -1,4 +1,3 @@
-import { Schema } from 'mongoose';
 import { Ride } from './ride.model';
 import { Driver } from '../driver/driver.model';
 
@@ -51,7 +50,8 @@ const acceptRide = async (rideId: string, driverId: string) => {
         throw new Error('This ride is no longer available');
     }
 
-    ride.driverId = driverId as unknown as Schema.Types.ObjectId;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ride.driverId = driverId as any;
     ride.status = 'accepted';
     ride.rideHistory.push({ status: 'accepted', timestamp: new Date() });
     await ride.save();
