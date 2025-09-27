@@ -8,6 +8,9 @@
 
 A secure, scalable, and role-based backend API for a ride-booking system (like Uber or Pathao). This project provides a robust foundation for a ride-sharing application, featuring distinct functionalities for riders, drivers, and administrators.
 
+## 🌐 [Live Deployment Link](https://ridex-api.vercel.app/)
+## 🎬 [Video Explanation Link](https://drive.google.com/file/d/1eKFG2txmlB_AWgfoW1DbEcc45jrR_mkQ/view?usp=sharing)
+
 ---
 
 ## 🚀 Key Features
